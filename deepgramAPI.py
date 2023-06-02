@@ -24,7 +24,10 @@ def main():
         print('To learn more about customizing your transcripts check out developers.deepgram.com')
 
         response = dg_client.transcription.sync_prerecorded(source, options)
+        print(json.dumps(response, indent=4))
         return json.dumps(response, indent=4)
 
 
-x = main()
+main()
+
+

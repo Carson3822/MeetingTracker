@@ -1,0 +1,3 @@
+pydub~=0.25.1
+deepgram~=2.5.0
+ffmpeg
