@@ -2,8 +2,8 @@ import json
 from deepgramAPI import call_api
 
 
-#data_path = call_api()
-data_path = "OutputData/jsonfiles/responseapi.json"
+data_path = call_api()
+#data_path = "OutputData/jsonfiles/responseapi.json"
 with open(data_path, "r") as read_file:
     data = json.load(read_file)
 
@@ -26,8 +26,7 @@ def find_names(dict_names: dict):
     wordz = data["results"]["channels"][0]["alternatives"][0]["words"]
     for i in range(len(wordz)):
         if wordz[i]["word"] in [*dict_names]:
-            print(wordz[i]["word"], [*dict_names])
-            dict_names[wordz[i]["word"]] += [wordz[i]["start"]]
+            dict_names[wordz[i]["word"]] += [int(wordz[i]["start"]//1)]
 
-    dict_names.update({"endclip": wordz[i]["end"]})
+    dict_names.update({"endclip": int(wordz[i]["end"]//1)})
     return dict_names

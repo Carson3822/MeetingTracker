@@ -1,12 +1,12 @@
 from deepgram import Deepgram
 import json
-from info import filepath, YOUR_SECRET_KEY
+from info import input_audio_filepath, YOUR_SECRET_KEY
 
 # Insert your API key from deepgram
 DEEPGRAM_API_KEY = YOUR_SECRET_KEY
 
 # Replace with your file path and audio mimetype
-PATH_TO_FILE = filepath
+PATH_TO_FILE = input_audio_filepath
 MIMETYPE = 'audio/wav'
 
 
