@@ -42,6 +42,6 @@ Deepgram's speech to text API was selected as it accepts over 40 common audio fi
 7. Dockerize
 
 
-##KNOWN BUGS
-- if the S-T API transcribes a name but the name is spelled differently for a user it will not find them in the output and will not send email.
-      - IE if Katy is absent but here name is transcribed as Katie by the API she will not recieve and email.
+## KNOWN BUGS
+- if the S-T API transcribes a name but the name is spelled differently for a user it will not find them in the output and will not send email. 
+- IE if Katy is absent but here name is transcribed as Katie by the API she will not recieve and email.
