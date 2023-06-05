@@ -1,18 +1,7 @@
 from pydub import AudioSegment
-import os
 from datetime import datetime
-from info import input_audio_filepath, em
+from info import input_audio_filepath, team_members, today, absent_time_info
 from JSONparser import find_absent_members, find_names
-
-team_members = {
-    "E01": {"fullname": "Mark Hammond", "Email": em, "attendance": False},
-    "E02": {"fullname": "Anthony Clark", "Email": em, "attendance": True},
-    "E03": {"fullname": "Katie Smith", "Email": em, "attendance": False},
-    "E04": {"fullname": "Tim Smith", "Email": em, "attendance": True}
-}
-
-today = datetime.today().strftime('%m|%d')
-absent_time_info = find_names(find_absent_members(team_members))
 
 
 def save_snippet(name: str, begin: float, end: float, n: int):
@@ -23,8 +12,8 @@ def save_snippet(name: str, begin: float, end: float, n: int):
     output_audio.export(out_file_path, format="wav", bitrate="1411k", codec="pcm_s16le")
 
 
-def set_timestamps(absnt_info):
-    """dynamically sets length of audio snippet then saves data"""
+def create_snippets(absnt_info):
+    """dynamically sets length of audio snippet then saves data in snippedaudio folder"""
     for i in absnt_info.keys():
         if i != "endclip":
             beg_ts = (absnt_info[i][0] - 120 if absnt_info[i][0] - 120 > 0 else 0) * 1000
@@ -43,4 +32,4 @@ def set_timestamps(absnt_info):
 
 
 if __name__ == "__main__":
-    set_timestamps(absent_time_info)
+    create_snippets(absent_time_info)

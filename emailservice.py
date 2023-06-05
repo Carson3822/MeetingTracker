@@ -1,4 +1,3 @@
-# Import smtplib for the actual sending function.
 import smtplib
 from email.message import EmailMessage
 from datetime import datetime
@@ -7,22 +6,15 @@ from string import Template
 from info import *
 
 
-# The mail addresses and password
-
-sender_address = s_a
-sender_pass = s_p
-receiver_address = rec_a
-
-
 # Create the container email message.
-def create_MIME_msg(audio_file_path):
+def create_MIME_msg(audio_file_path, name):
     curr_date = datetime.today().strftime('%m-%d')
     html = Template(Path("emailformat.html").read_text())
     msg = EmailMessage()
     msg['From'] = sender_address
     msg['To'] = receiver_address
     msg['Subject'] = f"You were mentioned in a Missed Meeting: {curr_date}"
-    msg.set_content(html.substitute(name=missing_members["E01"]["fullname"]), 'html')
+    msg.set_content(html.substitute(name=name), 'html')
 
     # attach audio file
     with open(audio_file_path, 'rb') as fp:

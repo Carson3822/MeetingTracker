@@ -30,12 +30,12 @@ Users must create a account with deepgram and set up private key for the API to 
 Deepgram's speech to text API was selected as it accepts over 40 common audio files (MP3, WAV, FLAC, M4A) 
 
 ## Milestones/Planned features
-1. send emails with gmail
+1. send emails with gmail 
    - support for other email types
-2. Deepgram API integration
-   - accept prerecorded audio files
+2. Deepgram API integration 
+   - accept prerecorded audio files (DONE)
    - accept prerecorded video files
-3. Snip input audio
+3. Snip input audio (DONE)
 4. Allow database integration (AWS)
 5. Design and develop functioning UI
 6. Testing
