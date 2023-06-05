@@ -1,5 +1,6 @@
 # MeetingTracker
-##CURRENTLY WORK IN PROGRESS -- NON FUNCTIONING
+## CURRENTLY WORK IN PROGRESS -- NON FUNCTIONING
+
 ## Description
 The MeetingApp application allows company boards and teams to keep their absent members up-to-date on all matters 
 discussed during meetings that involve the missing members. All it requires is the meeting is recorded and that 
