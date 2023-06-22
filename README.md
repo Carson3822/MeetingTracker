@@ -1,5 +1,5 @@
 # MeetingTracker
-## CURRENTLY WORK IN PROGRESS -- NON FUNCTIONING
+## CURRENTLY WORK IN PROGRESS
 
 ## Description
 The MeetingApp application allows company boards and teams to keep their absent members up-to-date on all matters 
